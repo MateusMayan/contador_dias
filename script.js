@@ -1,20 +1,21 @@
 function calcular(dataFinal, dataInicial) {
-  var data1 = new Date(document.getElementById(dataInicial).value);
-  var data2 = new Date(document.getElementById(dataFinal).value);
-  console.log(data1.getTime());
-  console.log(data2.getTime());
+  var valueDataInicial = new Date(document.getElementById(dataInicial).value);
+  var valueDataFinal = new Date(document.getElementById(dataFinal).value);
 
   var res = document.querySelector(".res");
+  res.innerHTML = ""; // Limpar conteúdo anterior
   var p = document.createElement("p");
   res.appendChild(p);
 
-  //Autenticação para data Final não ser inferior
-
-  if (data2 < data1) {
-    p.innerHTML = "Verifique as datas selecionados";
+  if (valueDataFinal < valueDataInicial) { //Autenticação para data Final não ser anterior à data inicial
+    p.innerHTML = "A data final não pode ser anterior à data inicial.";
   } else {
-    var diffInMs = data2.getTime() - data1.getTime();
+    var diffInMs = valueDataFinal.getTime() - valueDataInicial.getTime();
     var day = diffInMs / (1000 * 60 * 60 * 24);
-    p.innerHTML = `São ${day} de diferença entre as datas informadas`;
+    if (day == 1) {
+      p.innerHTML = `Uma diferença de apenas ${day} dia`;
+    } else  {
+      p.innerHTML = `São ${day} de diferença entre as datas informadas`;
+    }
   }
 }
