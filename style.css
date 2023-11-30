@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     font: normal 15pt arial;
     background: linear-gradient( to top,  #473E66, #BD83B8, #F5D7DB, #F1916D);
@@ -45,6 +51,7 @@ input {
 
 input[type=button] {
     cursor: pointer;
+    color: #06142E;
 }
 
 label {
@@ -68,5 +75,10 @@ footer {
 
     body {
         font: normal 12pt arial;
+    }
+
+    input {
+        border: 2px solid white;
+        height: auto;
     }
 }
