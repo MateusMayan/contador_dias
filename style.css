@@ -3,10 +3,16 @@ body{
     background: linear-gradient( to top,  #473E66, #BD83B8, #F5D7DB, #F1916D);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
    background: transparent;
    color: #06142E;
    border-radius: 10px;
@@ -20,6 +26,11 @@ body{
 label {
     font: normal 15pt arial;
     color: #06142E;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
 }
 
 input {
@@ -47,4 +58,15 @@ footer, header {
 }
 footer {
     font-style: italic;
+}
+
+@media (max-width: 426px) {
+    .container{
+        width: 250px;
+        padding: 5px;
+    }
+
+    body {
+        font: normal 12pt arial;
+    }
 }
