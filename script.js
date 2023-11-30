@@ -15,7 +15,7 @@ function calcular(dataFinal, dataInicial) {
     if (day == 1) {
       p.innerHTML = `Uma diferença de apenas ${day} dia`;
     } else  {
-      p.innerHTML = `São ${day} de diferença entre as datas informadas`;
+      p.innerHTML = `São ${day} dias de diferença entre as datas informadas`;
     }
   }
 }
